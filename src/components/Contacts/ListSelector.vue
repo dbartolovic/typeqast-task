@@ -1,6 +1,6 @@
 <template>
     <div id="list-select">
-      <div class="list-selector active">
+      <div class="list-selector">
         <router-link to="/">All contacts</router-link>
       </div>
       <div class="list-selector">
@@ -32,12 +32,14 @@ export default {
     font-size: 18px;
     font-weight: bold;
     padding: 0 30px;
-    color: #BBC4C3;
-    &.active {
-      color: #2DA1AD;
-    }
     &:first-child {
       border-right: solid 1px #BBC4C3;
+    }
+    a {
+      color: #BBC4C3;
+    }
+    a.router-link-exact-active {
+      color: #2DA1AD;
     }
   }
 }
