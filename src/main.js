@@ -19,8 +19,10 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({
   beforeCreate() {
-    console.log('Todos changed!');
-    localStorage.setItem('contacts', JSON.stringify(initialData));
+    if (!localStorage.contacts) {
+      console.log('Contacts initialized!');
+      localStorage.setItem('contacts', JSON.stringify(initialData));
+    }
   },
   el: '#app',
   router,
