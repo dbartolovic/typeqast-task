@@ -1,6 +1,6 @@
 <template>
   <ul class="list-container">
-    <AddNew />
+    <AddNew v-if="$route.path === '/'" />
     <ListItem v-for="item in contacts" v-bind:key="item.id" :contact="item" />
   </ul>
 </template>
